@@ -18,6 +18,5 @@
 <br>
 
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=n1cogrv&show_icons=true&theme=dark#gh-dark-mode-only">
-<img src="https://github-readme-stats.vercel.app/api?username=n1cogrv&show_icons=true&theme=default#gh-light-mode-only">
+<img src="https://github-readme-stats.vercel.app/api?username=n1cogrv&show_icons=true&theme=transparent">
 </p>
