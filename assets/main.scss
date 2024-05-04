@@ -1,0 +1,66 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import 'modern-resume-theme';
+
+.footer-container p {
+    font-style: normal;
+}
+
+.footer-container a {
+    font-style: normal;
+}
+
+.dark {
+    background-color: #080808;
+    color: #e6e6e6;
+}
+
+.dark {
+    mark {
+      color: #080808;
+      background-color: #e6e6e6;
+    }
+  
+    a {
+      color: #4fcb3e;
+    }
+
+    a:active,
+    a:focus,
+    a:hover {
+        color: #39a12b;
+    }
+}
+
+a {
+    color: #14550f;
+    transition: color 150ms ease;
+}
+a:active,
+a:focus,
+a:hover {
+  color: #1d7916;
+}
+
+.page-content {
+    line-height: 1.8;
+}
+
+body {
+    font-family: system-ui, -apple-system, Roboto, Ubuntu, Cantarell, "Noto Sans", BlinkMacSystemFont,
+      "Helvetica Neue", Helvetica, "Segoe UI", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei",
+      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: system-ui, -apple-system, Roboto, Ubuntu,Cantarell, "Noto Sans", BlinkMacSystemFont,
+    "Helvetica Neue", Helvetica, "Segoe UI", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
