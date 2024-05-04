@@ -1,0 +1,134 @@
+# Site
+repository: n1cogrv/n1cogrv
+favicon: img/favicon.ico
+
+# Content configuration version
+version: 2
+
+github: [metadata]
+
+name: Jason Chen
+title: '📍 Guangdong, China'
+email: mail@jasonchen.icu
+website: jasonchen.icu
+
+# Respect device dark mode settings
+darkmode: false
+
+# Social links
+github_username:  n1cogrv
+linkedin_username: jasonchen99
+
+# Additional icon links
+additional_links:
+- title: IPKB
+  icon: fas fa-globe
+  url: https://ipkb.jasonchen.icu
+- title: Résumé
+  icon: far fa-file-pdf
+  url: https://google.com
+
+
+# About Section
+about_title: About Me
+about_profile_image: img/avatar500x500.png
+about_content: | 
+  
+  💼 I was previously employed as an **International Patent Engineer** in a patent agency.
+
+  📚 I am an Intellectual Property practitioner, and hoping to become an **attorney**.
+
+  💻 I am an amateur yet passionate developer with love for **Linux**.
+
+  🌎 I am **proficient in English**, and capable of providing support in ( 两文三语 \| 兩文三語 \| biliteracy and trilingualism \| 🇨🇳🇭🇰🇺🇸 ).
+
+  🔢 I own a bachelor's degree in **Mathematics - Information and Computing Science**.
+
+  ☕️ I am a **coffee lover**, and refuse to [brew coffee with a Teapot](http://error418.net/) according to [HTCPCP/1.0 (RFC 2324)](https://datatracker.ietf.org/doc/html/rfc2324/).
+
+
+content:
+  - title: Experience
+    layout: list 
+    content:
+      - layout: left
+        title: Jiaquan IP Law Firm
+        link: https://www.jiaquanip.com/
+        link_text: jiaquanip.com
+        sub_title: International Department <br>Patent Engineer
+        caption: April 2022 - July 2023
+        quote: >
+          Founded in 1988, Jiaquan has evolved from a patent legal service provider to a global IP law firm with 11 offices and over 800 professionals. Specializing in IP filing, prosecution, litigation, licensing, and transactions.
+        description: | 
+            TODO: Add description.
+
+  - title: Projects 
+    layout: list 
+    content:
+      - layout: left
+        title: IPKB
+        sub_title: 知产智库 <br>Intellectual Property <br>Knowledge Base
+        link: https://ipkb.jasonchen.icu
+        link_text: ipkb.jasonchen.icu
+        additional_links:
+          - title:  n1cogrv/ipkb
+            icon: fab fa-github
+            url: github.com/n1cogrv/ipkb
+        quote: >
+          IPKB was a tool I created in my off-hours, aiming to boost productivity. It is now an non-profit and non-commercial website developed, operated and maintained solely by me.
+        description: | 
+          TODO: Add description.
+
+  - title: Education 
+    layout: list 
+    content:
+      - layout: left
+        title: Zhejiang Sci-Tech University
+        caption: 2017 - 2021
+        sub_title: 浙江理工大学 <br>BSc Mathematics <br>Information and Computing Science
+        quote: >
+          Founded in 1897, Zhejiang Sci-Tech University is a provincial key university located in Hangzhou, Zhejiang Province, with distinct characteristics and advantages as well as the coordinated development of the various disciplines of sciences.
+        description: | 
+          TODO: Add description.
+
+  - title: A Little More About Me
+    layout: text
+    content: | 
+      Alongside my interests and capabilities in Intellectual Property, I also have a Technology Stack of the following:
+
+      <br>
+      
+      #### Category I 
+
+      Stuff I care.
+
+      ![Python](https://img.shields.io/badge/Python%20-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![MDX](https://img.shields.io/badge/MDX-1B1F24?style=for-the-badge&logo=mdx&logoColor=white) ![NodeJS](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![React](https://img.shields.io/badge/React-%23353947?style=for-the-badge&logo=react) ![Docusauras](https://img.shields.io/badge/Docusaurus-3ECC5F?style=for-the-badge&logo=Docusaurus&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white) ![Colab](https://img.shields.io/badge/Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252)
+
+      #### Category II 
+
+      Stuff I don't care.
+
+      ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Manjaro](https://img.shields.io/badge/manjaro-35BF5C?style=for-the-badge&logo=manjaro&logoColor=white) ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?&style=for-the-badge&logo=vim&logoColor=white) ![NeoVim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white) ![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+
+      #### Category III 
+
+      Stuff No one cares.
+
+      ![MSWord](https://img.shields.io/badge/Microsoft_Word-2B579A?style=for-the-badge&logo=microsoft-word&logoColor=white) ![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white) ![PyCharm](https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=PyCharm&logoColor=white) ![WebStorm](https://img.shields.io/badge/WebStorm-000000?style=for-the-badge&logo=WebStorm&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white) ![Obsidian](https://img.shields.io/badge/Obsidian-483699?style=for-the-badge&logo=Obsidian&logoColor=white) ![GitHub User's stars](https://img.shields.io/github/stars/n1cogrv?style=for-the-badge&logo=github&link=https%3A%2F%2Fgithub.com%2Fn1cogrv)
+
+
+# Footer
+footer_show_references: true
+references_title: 'Last Updated: May 2024 - © 2024 Jason Chen. All rights reserved.'
+
+# Build settings
+remote_theme: sproogen/resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+url: "https://jasonchen.icu" 
+plugins:
+ - jekyll-seo-tag
+ - jemoji
