@@ -64,3 +64,23 @@ h6 {
     "Helvetica Neue", Helvetica, "Segoe UI", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei",
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+.text-section {
+    p,ul {
+        text-align: unset;
+        line-height: 2.2;
+    }
+}
+
+.infotext {
+    background-color: #e0e0e0;
+    color: #080808;
+    font-size: 1.2rem;
+}
+
+.dark {
+    .infotext {
+        background-color: #161616;
+        color: #e6e6e6;
+    }
+}
