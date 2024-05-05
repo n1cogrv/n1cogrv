@@ -7,6 +7,8 @@ version: 2
 
 github: [metadata]
 
+infotext: 'Notice for visitors from Mainland China: Various measures are made to ensure your browsing experience. Due to Internet censorship, some features may still be limited.' 
+
 name: Jason Chen
 title: '📍 Guangdong, China'
 email: mail@jasonchen.icu
@@ -122,7 +124,7 @@ footer_show_references: true
 references_title: 'Last Updated: May 2024 - © 2024 Jason Chen. All rights reserved.'
 
 # Build settings
-remote_theme: sproogen/resume-theme
+remote_theme: n1cogrv/modern-resume-theme-self-contained
 
 sass:
   sass_dir: _sass
