@@ -12,7 +12,7 @@ infotext: 'Notice for visitors from Mainland China: Various measures are made to
 name: Jason Chen
 title: '📍 Guangdong, China'
 email: mail@jasonchen.icu
-website: jasonchen.icu
+website: im.jasonchen.icu
 
 # Respect device dark mode settings
 darkmode: false
@@ -23,12 +23,12 @@ linkedin_username: jasonchen99
 
 # Additional icon links
 additional_links:
-- title: IPKB
+- title: Profile Page
   icon: fas fa-globe
-  url: https://ipkb.jasonchen.icu
-- title: Résumé
-  icon: far fa-file-pdf
-  url: https://google.com
+  url: https://im.jasonchen.icu
+# - title: Résumé
+#   icon: far fa-file-pdf
+#   url: https://google.com
 
 
 # About Section
@@ -38,11 +38,11 @@ about_content: |
   
   💼 I was previously employed as an **International Patent Engineer** in a patent agency.
 
-  📚 I am an Intellectual Property practitioner, and hoping to become an **attorney**.
+  📚 I am an Intellectual Property practitioner, and hoping to become a **patent attorney**.
 
   💻 I am an amateur yet passionate developer with love for **Linux**.
 
-  🌎 I am **proficient in English**, and capable of providing support in ( 两文三语 \| 兩文三語 \| biliteracy and trilingualism \| 🇨🇳🇭🇰🇺🇸 ).
+  🌎 I am **proficient in English**, and capable of providing support in ( 两文三语 \| 兩文三語 \| biliteracy and trilingualism \| 🇨🇳 🇭🇰 🇺🇸).
 
   🔢 I own a bachelor's degree in **Mathematics - Information and Computing Science**.
 
@@ -71,7 +71,7 @@ content:
         title: IPKB
         sub_title: 知产智库 <br>Intellectual Property <br>Knowledge Base
         link: https://ipkb.jasonchen.icu
-        link_text: ipkb.jasonchen.icu
+        link_text: https://ipkb.jasonchen.icu
         additional_links:
           - title:  n1cogrv/ipkb
             icon: fab fa-github
@@ -120,8 +120,10 @@ content:
 
 
 # Footer
-footer_show_references: true
-references_title: 'Last Updated: May 2024 - © 2024 Jason Chen. All rights reserved.'
+#footer_show_references: true
+last_update: 'May 2024'
+power_platform: '[Jekyll](https://jekyllrb.com/) and [Vercel](https://vercel.com)'
+copyright_notice: '© 2024 Jason Chen. All rights reserved.'
 
 # Build settings
 remote_theme: n1cogrv/modern-resume-theme-self-contained
@@ -130,7 +132,7 @@ sass:
   sass_dir: _sass
   style: compressed
 
-url: "https://jasonchen.icu" 
+url: "https://im.jasonchen.icu" 
 plugins:
  - jekyll-seo-tag
  - jemoji
