@@ -122,7 +122,7 @@ content:
 # Footer
 #footer_show_references: true
 last_update: 'May 2024'
-power_platform: '[Jekyll](https://jekyllrb.com/), and [Vercel](https://vercel.com).'
+power_platform: '[Jekyll](https://jekyllrb.com/) and [Vercel](https://vercel.com)'
 copyright_notice: '© 2024 Jason Chen. All rights reserved.'
 
 # Build settings
