@@ -13,11 +13,11 @@
 
 💼 was previously employed as an **International Patent Engineer** in a patent agency.
 
-📚 is an Intellectual Property practitioner, and hoping to become an **attorney**.
+📚 is an Intellectual Property practitioner, and hoping to become a **patent attorney**.
 
 💻 is an amateur yet passionate developer with love for Linux.
 
-🌎 is proficient in English, and capable of providing support in [ 两文三语 | 兩文三語 | biliteracy and trilingualism | 🇨🇳🇭🇰🇺🇸 ]
+🌎 is proficient in English, and capable of providing support in [ 两文三语 | 兩文三語 | biliteracy and trilingualism | 🇨🇳 🇭🇰 🇺🇸 ].
 
 🔢 owns a bachelor's degree in Mathematics - Information and Computing Science.
 
