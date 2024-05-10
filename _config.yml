@@ -59,10 +59,10 @@ content:
         link_text: jiaquanip.cn
         additional_links:
           - title: 嘉権特許商標事務所 - JPN
-            icon: fab fa-globe-asia
+            icon: fas fa-globe-asia
             url: https://www.jiaquanip.com/jn/index.html
           - title: Jiaquan IP & Law - Eng
-            icon: fab fa-globe-americas
+            icon: fas fa-globe-americas
             url: https://www.jiaquanip.com/index.html
         sub_title: International Department <br>Patent Engineer
         caption: April 2022 - July 2023
@@ -111,17 +111,18 @@ content:
 
       - layout: left
         title: Covid-19 US Visualization
+        sub_title: Data visualization panel for US 🇺🇸 citizens
         link: https://wear-a-mask.jasonchen.icu
         link_text: wear-a-mask.jasonchen.icu
         additional_links:
-          - title:  n1cogrv/ipkb
+          - title:  n1cogrv/covid-19-visualization
             icon: fab fa-github
             url: https://github.com/n1cogrv/covid-19-visualization
         description: | 
           
           + An online data visualization website built using Python for Data Analysis. Statistics data is fetched from upstream; cleansed, grouped, analyzed, and visualized for country level, state level and even county level.
           
-          + Built using Python(pandas) and SQL for Data Analysis, GitHub Workflows for Continuous Integration; HTML5+CSS3+JS, Bootstrap and GitHub Pages for serving; Highcharts for Data Visualization.
+          + Built using Python(pandas) and SQL for Data Analysis, GitHub Workflows for Continuous Integration; HTML5+CSS3+JS, Bootstrap and GitHub Pages for serving; HighCharts for Data Visualization.
 
 
   - title: Education 
