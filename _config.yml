@@ -26,9 +26,9 @@ additional_links:
 - title: Profile Page
   icon: fas fa-globe
   url: https://im.jasonchen.icu
-# - title: Résumé
-#   icon: far fa-file-pdf
-#   url: https://google.com
+- title: Résumé / CV
+  icon: far fa-file-pdf
+  url: https://im.jasonchen.icu/assets/JasonChenResume.pdf
 
 
 # About Section
@@ -42,7 +42,7 @@ about_content: |
 
   💻 I am an amateur yet passionate developer with love for **Linux**.
 
-  🌎 I am **proficient in English**, and capable of providing support in ( 两文三语 \| 兩文三語 \| biliteracy and trilingualism \| 🇨🇳 🇭🇰 🇺🇸).
+  🌎 I am **proficient in English**, and capable of providing support in 两文三语 / 兩文三語 / biliteracy and trilingualism / 🇭🇰 🇨🇳 🇺🇸 .
 
   🔢 I own a bachelor's degree in **Mathematics - Information and Computing Science**.
 
@@ -55,15 +55,31 @@ content:
     content:
       - layout: left
         title: Jiaquan IP Law Firm
-        link: https://www.jiaquanip.com/
-        link_text: jiaquanip.com
+        link: https://jiaquanip.cn/
+        link_text: jiaquanip.cn
+        additional_links:
+          - title: 嘉権特許商標事務所 - JPN
+            icon: fas fa-globe-asia
+            url: https://www.jiaquanip.com/jn/index.html
+          - title: Jiaquan IP & Law - Eng
+            icon: fas fa-globe-americas
+            url: https://www.jiaquanip.com/index.html
         sub_title: International Department <br>Patent Engineer
         caption: April 2022 - July 2023
         quote: >
           Founded in 1988, Jiaquan has evolved from a patent legal service provider to a global IP law firm with 11 offices and over 800 professionals. Specializing in IP filing, prosecution, litigation, licensing, and transactions.
         description: | 
-            TODO: Add description.
+          
+          + Experience in **bi-directional translation** (Chinese - English) in patent documents, Office Actions, Decisions of Rejection, and patent infringement lawsuit documents. ( Word count: approx. 500k )
 
+          + Ability to process **incoming patent applications**, comprising: translation; adaptive amendments; and responding to Notifications to Make Rectification, Office Actions, and Decisions of Rejection. ( Case count: approx. 60 )
+          
+          + Ability to process **outgoing patent applications** (USPTO, EPO, etc.), comprising: adaptive amendments; IDS preparation; and translating and responding to Office Actions, e.g., ROA, NFOA, FOA, Ex Parte Quayle OA. ( Case count: approx. 20 )
+          
+          + Ability to provide **English support and/or assistance in Face-to-Face/Video/Audio technical meetings**, in scenarios such as patent mining, divisional application strategy-making, and patent infringement lawsuit.
+          
+          + Ability to draft responses to **Office Actions for domestic patent applications**. ( Case count: approx. 30 )
+          
   - title: Projects 
     layout: list 
     content:
@@ -71,15 +87,43 @@ content:
         title: IPKB
         sub_title: 知产智库 <br>Intellectual Property <br>Knowledge Base
         link: https://ipkb.jasonchen.icu
-        link_text: https://ipkb.jasonchen.icu
+        link_text: ipkb.jasonchen.icu
         additional_links:
           - title:  n1cogrv/ipkb
             icon: fab fa-github
             url: github.com/n1cogrv/ipkb
-        quote: >
-          IPKB was a tool I created in my off-hours, aiming to boost productivity. It is now an non-profit and non-commercial website developed, operated and maintained solely by me.
+        # quote: >
+        #   IPKB is a tool featuring Intellectual Property Laws and Regulations, created in my off-hours, aiming to boost productivity. 
         description: | 
-          TODO: Add description.
+          + Intellectual Property Knowledge Base, IPKB, is a productivity tool created during the off-hours 
+          tailored to my needs to reference legal text in business emails.
+
+          + Featuring Intellectual Property Laws and Regulations, IPKB is built specifically for intellectual 
+          property practitioners, such as IP attorneys, patent engineers, and IP paralegal assistants. 
+          It organizes legal text in a unique way familiar to the industry, and offers approaches to search, 
+          locate, index, and reference IP-relevant legal text.
+
+          + With modern design and PWA architecture, IPKB is managed to perform its full capabilities even in 
+          offline mode. 
+
+          + Built using React and Docusaurus, IPKB is currently a non-profit and 
+          non-commercial website developed, operated and maintained solely by me.
+
+      - layout: left
+        title: Covid-19 US Visualization
+        sub_title: Data visualization panel for US 🇺🇸 citizens
+        link: https://wear-a-mask.jasonchen.icu
+        link_text: wear-a-mask.jasonchen.icu
+        additional_links:
+          - title:  n1cogrv/covid-19-visualization
+            icon: fab fa-github
+            url: https://github.com/n1cogrv/covid-19-visualization
+        description: | 
+          
+          + An online data visualization website built using Python for Data Analysis. Statistics data is fetched from upstream; cleansed, grouped, analyzed, and visualized for country level, state level and even county level.
+          
+          + Built using Python(pandas) and SQL for Data Analysis, GitHub Workflows for Continuous Integration; HTML5+CSS3+JS, Bootstrap and GitHub Pages for serving; HighCharts for Data Visualization.
+
 
   - title: Education 
     layout: list 
@@ -89,9 +133,13 @@ content:
         caption: 2017 - 2021
         sub_title: 浙江理工大学 <br>BSc Mathematics <br>Information and Computing Science
         quote: >
-          Founded in 1897, Zhejiang Sci-Tech University is a provincial key university located in Hangzhou, Zhejiang Province, with distinct characteristics and advantages as well as the coordinated development of the various disciplines of sciences.
+          Founded in 1897, Zhejiang Sci-Tech University is a provincial key university located in Hangzhou, Zhejiang Province, with coordinated development of various disciplines of sciences.
         description: | 
-          TODO: Add description.
+          **Achievement:** Ranking 14% with scholarship; CET4, CET6, Computer Rank Examination (Zhejiang, Level 2, C Programming Language).
+
+          **Key Coursework:** Mathematics Analysis, Advanced Algebra, Probability Theory and Mathematical Statistics, 
+          Differential Equations and Numerical Solutions, Computer Organization and Design, Computer Network, 
+          Software Engineering, Data Structures and Algorithms, Database System Principles, Artificial Intelligence and Machine Learning.
 
   - title: A Little More About Me
     layout: text
