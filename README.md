@@ -15,13 +15,13 @@
 
 📚 is an Intellectual Property practitioner, and hoping to become a **patent attorney**.
 
-💻 is an amateur yet passionate developer with love for Linux.
+💻 is an amateur yet passionate developer with love for **Linux**.
 
-🌎 is proficient in English, and capable of providing support in [ 两文三语 | 兩文三語 | biliteracy and trilingualism | 🇨🇳 🇭🇰 🇺🇸 ].
+🌎 is **proficient in English**, and capable of providing support in 两文三语 / 兩文三語 / biliteracy and trilingualism /  🇭🇰 🇨🇳 🇺🇸 .
 
-🔢 owns a bachelor's degree in Mathematics - Information and Computing Science.
+🔢 owns a bachelor's degree in **Mathematics - Information and Computing Science**.
 
-☕️ is a coffee lover, and refuses to [brew coffee with a Teapot](http://error418.net/) according to [HTCPCP/1.0 (RFC 2324)](https://datatracker.ietf.org/doc/html/rfc2324/).
+☕️ is a **coffee lover**, and refuses to [brew coffee with a Teapot](http://error418.net/) according to [HTCPCP/1.0 (RFC 2324)](https://datatracker.ietf.org/doc/html/rfc2324/).
 
 
 ### Have a Tech Stack of
@@ -36,7 +36,7 @@
 <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="Javascript">
 <img src="https://img.shields.io/badge/MDX-1B1F24?style=for-the-badge&logo=mdx&logoColor=white" alt="MDX">
 <img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="NodeJS">
-<img alt="Static Badge" src="https://img.shields.io/badge/React-%23353947?style=for-the-badge&logo=react">
+<img src="https://img.shields.io/badge/React-%23353947?style=for-the-badge&logo=react" alt="React">
 </p>
 
 <p align="center">
