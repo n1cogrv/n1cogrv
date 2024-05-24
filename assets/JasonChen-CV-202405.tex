@@ -1,0 +1,455 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{CJKutf8}
+\usepackage[
+	ignoreheadfoot, % set margins without considering header and footer
+	top=2 cm, % seperation between body and page edge from the top
+	bottom=2 cm, % seperation between body and page edge from the bottom
+	left=2 cm, % seperation between body and page edge from the left
+	right=2 cm, % seperation between body and page edge from the right
+	footskip=1.0 cm, % seperation between body and footer
+	% showframe % for debugging
+]{geometry}
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+	pdftitle={Jason_Chen_LaTeX_CV_202405},
+	pdfauthor={Jason Chen},
+	colorlinks=true,
+	urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{setspace}
+\usepackage[most]{tcolorbox}
+
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{ \color{gray}\textit{\small Jason Chen - \color{black}\textnormal{\thepage{} / \pageref*{LastPage}} \color{gray}- Résumé} }{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[
+\vspace{1pt}
+\titlerule]
+
+\titlespacing{\section}{
+% left space:
+-1pt }{
+% top space:
+0.3 cm }{
+% bottom space:
+0.2 cm } % section title spacing
+\renewcommand{\labelitemi}{$\circ$} % custom bullet points
+\newenvironment{highlights}{ \begin{itemize}[ topsep=0.15 cm, parsep=0.15 cm, partopsep=0pt,
+itemsep=0pt, leftmargin=0.4 cm + 10pt ] }{ \end{itemize} } % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{ \begin{itemize}[ topsep=0.15 cm,
+parsep=0.15 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} } % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{ \begin{adjustwidth}{ 0.2 cm + 0.00001 cm }{ 0.2 cm + 0.00001 cm }
+}{ \end{adjustwidth} } % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{ \onecolentry \def\secondColumn{#2} \setcolumnwidth{\fill, 4.5 cm}
+\begin{paracol}{2} }{ \switchcolumn \raggedleft \secondColumn \end{paracol}
+\endonecolentry } % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{ \onecolentry \def\thirdColumn{#3} \setcolumnwidth{0.6 cm, \fill, 4.5 cm}
+\begin{paracol}{3} #2 \switchcolumn }{ \switchcolumn \raggedleft \thirdColumn \end{paracol}
+\endonecolentry } % new environment for three column entries
+
+\newenvironment{header}{
+\setlength{\topsep}{0pt}
+\par\kern\topsep
+\centering
+\linespread{1.5} }{ \par\kern\topsep } % new environment for the header
+
+\newcommand{\placelastupdatedtextcn}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+\AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+\put( \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm}, \LenToUnit{\paperheight-1.0 cm} ){\vtop{{\null}\makebox[0pt][c]{ \small\color{gray}\textit{Revision: \LaTeX{}-zh\_CN-202405 }\hspace{\widthof{\LaTeX{}-zh\_CN-202405}} }}}%
+}%
+}%
+
+\newcommand{\placelastupdatedtexten}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+\AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+\put( \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm}, \LenToUnit{\paperheight-1.0 cm} ){\vtop{{\null}\makebox[0pt][c]{ \small\color{gray}\textit{Revision: \LaTeX{}-en\_US-202405 }\hspace{\widthof{\LaTeX{}-en\_US-202405}} }}}%
+}%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\mbox{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}}
+
+\newtcolorbox{infobox}[2][]{
+lower separated=false,
+colback=white,
+colframe=white!50!gray,
+fonttitle=\bfseries,
+colbacktitle=white,
+coltitle=white!50!gray,
+enhanced,
+attach boxed title to top left={yshift=-0.1in,xshift=0.15in},
+boxed title style={boxrule=0pt,colframe=white,},
+title=#2,#1}
+
+\begin{document}
+	\begin{CJK*}
+		{UTF8}{gbsn}
+		\begin{spacing}
+			{1.3}
+
+			\placelastupdatedtextcn
+			\begin{header}
+				\textbf{\fontsize{24 pt}{24 pt}\selectfont Jason Chen}
+
+				\vspace{0.3 cm}
+
+				\normalsize
+				\mbox{{\color{black}{\footnotesize\faMapMarker*}\hspace*{0.15cm}广东省江门市}}
+				\kern 1 cm
+				\mbox{\hrefWithoutArrow{mailto:mail@jasonchen.icu}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.15cm}mail@jasonchen.icu}}
+				\kern 1 cm
+				\mbox{\hrefWithoutArrow{tel:+86-1**-****-****}{\color{black}{\footnotesize\faPhone*}\hspace*{0.15cm}+86 1** **** ****}}
+				\kern 1 cm
+				\mbox{\href{https://im.jasonchen.icu/}{\color{black}
+				{\footnotesize\faLink}\hspace*{0.15cm}im.jasonchen.icu}}
+				\kern 1 cm
+				\mbox{\href{https://linkedin.com/in/jasonchen99}{\color{black}
+				{\footnotesize\faLinkedinIn}\hspace*{0.15cm}jasonchen99}}
+				\kern 1 cm
+				\mbox{\href{https://github.com/n1cogrv}{\color{black}
+				{\footnotesize\faGithub}\hspace*{0.15cm}n1cogrv}}
+				\kern 1 cm
+			\end{header}
+
+			\vspace{0.3 cm - 0.3 cm}
+
+			\section{Summary}
+
+			\begin{onecolentry}
+				前国际专利工程师，曾任职于某专利商标事务所国际部，拥有欧美日韩印等多国案件处理经验。我将利用以往工作中积累的电学、软通领域案件处理经验、广泛且多样化的计算机技能、数学教育背景、数据分析能力、以及专业级的英语水平在现应聘的全职岗位上提升工作表现。
+			\end{onecolentry}
+
+			\section{Education}
+
+			\begin{twocolentry}
+				{
+
+				\textit{2017.7 - 2022.1}} \textbf{浙江理工大学}
+
+				\text{理学学士~-~数学系~-~信息与计算科学}
+			\end{twocolentry}
+
+			\vspace{0.15 cm-3px}
+			\begin{onecolentry}
+				\begin{highlights}
+					\item 相关事项：专业排名14\%及相应奖学金；CET-4、CET-6；浙江省计算机等级考试二级（C语言）。
+					\item \textbf{主要课程：}数学分析、高等代数、概率论与数理统计、常微分方程及数值解、计算机组成、计算机网络、软件工程、数据结构与算法、数据库系统原理、人工智能和机器学习
+				\end{highlights}
+			\end{onecolentry}
+
+			\section{Experience}
+
+			\begin{twocolentry}
+				{ \text{广东省江门市}
+
+				\textit{2022.4 - 2023.7}} \textbf{国际专利工程师}
+
+				\text{广州嘉权专利商标事务所有限公司} \hspace{0.15 cm} \textit{\href{https://www.jiaquanip.cn}{jiaquanip.cn}}
+			\end{twocolentry}
+
+			\vspace{0.15 cm-3px}
+			\begin{onecolentry}
+				\begin{highlights}
+					\item 拥有\textbf{中英双向翻译}专利申请文件、审查意见通知书等官文，以及专利侵权诉讼案件相关法律文书的经验。\textcolor{gray}{（词数小计：约50万）}
+					\item 处理\textbf{IP专利实务}事项，包括：翻译、根据法律法规的适应性修改、答辩审查意见通知书和驳回决定书、分案申请。\textcolor{gray}{（案件小计：60+）}
+					\item 处理\textbf{OP专利实务}事项，包括：翻译，根据各地法律法规的适应性修改，IDS，以及翻译和答辩各类审查意见通知书，如\textit{ROA}、\textit{NFOA}、\textit{FOA}、\textit{Ex
+					Parte Quayle OA}。\textcolor{gray}{（案件小计: 20+）} \item
+					在技术会议中（线下面对面/线上音视频）提供相关英语支持和/或协助，例如专利挖掘、分案申请策略制定及专利侵权诉讼案件等。
+					\item 处理国内案件的审查意见通知书，以及专利生命周期内其他实务事项。\textcolor{gray}{（案件小计：30+）}
+					\item 于一年内晋升至国际2级代理人。\textcolor{gray}{（共0~-~4级）}
+				\end{highlights}
+			\end{onecolentry}
+
+			\section{Projects}
+
+			\begin{twocolentry}
+				{ \text{开发迭代中}
+
+				\textit{2023 - present}} \textbf{知产智库（Intellectual Property
+				Knowledge Base）}
+
+				\textit{\href{https://ipkb.jasonchen.icu}{ipkb.jasonchen.icu}
+				\hspace{0.1 cm}
+				\href{https://github.com/n1cogrv/ipkb}{GitHub - n1cogrv/ipkb}}
+			\end{twocolentry}
+
+			\vspace{0.15 cm-3px}
+			\begin{onecolentry}
+				\begin{highlights}
+					\item 知产智库（Intellectual Property Knowledge Base，IPKB）是我在业余时间量身定制的生产力工具，用于在与客户、律所交流邮件中快速引用且复用法律文本。
+					\item IPKB专注知识产权法律法规文本，专为知识产权从业者设计，如知产律师、专利代理人、工程师等。它以业内熟悉的方式排版法律法规文本，并提供搜索、定位、索引和站内站外引用知识产权相关法律文本的方式。
+					\item IPKB采用现代风格设计和采纳PWA架构，即使在离线模式下也能充分发挥其全部功能。
+					\item IPKB使用React和Docusaurus构建，是一个非营利性、非商业性网站，完全由我开发、运营和维护。
+				\end{highlights}
+			\end{onecolentry}
+
+			\vspace{0.2 cm-3px}
+
+			\begin{twocolentry}
+				{ \text{停止服务/预览冻结}
+
+				\textit{2020 - 2023}} \textbf{Covid-19-US 数据可视化}
+
+				\textit{\href{https://wear-a-mask.jasonchen.icu}{wear-a-mask.jasonchen.icu}}
+			\end{twocolentry}
+
+			\vspace{0.15 cm-3px}
+			\begin{onecolentry}
+				\begin{highlights}
+					\item Python数据分析自动化构建的数据可视化网站。统计数据从上游被获取后，进行清洗、分组、分析和可视化后，在网页端按需呈现。
+					\item 采用Python（pandas）和SQL数据分析，GitHub Workflows持续集成；H5C3JS、Bootstrap、GitHub
+					Pages作为前端及托管；Highcharts数据可视化。
+				\end{highlights}
+			\end{onecolentry}
+
+			\section{Additional Skills And Certificates}
+
+			\begin{onecolentry}
+				\textbf{专利代理人考试：} 科目三「专利代理实务」2023.7考试已通过。
+			\end{onecolentry}
+
+			\vspace{0.2 cm}
+
+			\begin{onecolentry}
+				\textbf{语言能力：} CET-6（584）, TOEIC（950）（2023第四季度前有效），能够在技术性会面中提供全面的英语支持。
+			\end{onecolentry}
+
+			\vspace{0.2 cm}
+
+			\begin{onecolentry}
+				\textbf{编程语言、框架、软件：} 能够将常见AI模型整合至工作流中; Python,
+				Java, SQL, Git, Docker, Linux, React, Microsoft Word, HTML5, CSS3, JavaScript等。（更多详情参见\href{https://github.com/n1cogrv}{GitHub}个人首页）
+			\end{onecolentry}
+		\end{spacing}
+	\end{CJK*}
+
+	% !ENGLISH PAGE!
+	\newpage
+
+	\placelastupdatedtexten
+
+	\begin{spacing}
+		{1.1}
+
+		\begin{header}
+			\textbf{\fontsize{24 pt}{24 pt}\selectfont Jason Chen}
+
+			\vspace{0.3 cm}
+
+			\normalsize
+			\mbox{{\color{black}{\footnotesize\faMapMarker*}\hspace*{0.15cm}Jiangmen, Guangdong}}
+			\kern 1 cm
+			\mbox{\hrefWithoutArrow{mailto:mail@jasonchen.icu}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.15cm}mail@jasonchen.icu}}
+			\kern 1 cm
+			\mbox{\hrefWithoutArrow{tel:+86-1**-****-****}{\color{black}{\footnotesize\faPhone*}\hspace*{0.15cm}+86 1** **** ****}}
+			\kern 1 cm
+			\mbox{\href{https://im.jasonchen.icu/}{\color{black}
+			{\footnotesize\faLink}\hspace*{0.15cm}im.jasonchen.icu}}
+			\kern 1 cm
+			\mbox{\href{https://linkedin.com/in/jasonchen99}{\color{black}
+			{\footnotesize\faLinkedinIn}\hspace*{0.15cm}jasonchen99}}
+			\kern 1 cm
+			\mbox{\href{https://github.com/n1cogrv}{\color{black}
+			{\footnotesize\faGithub}\hspace*{0.15cm}n1cogrv}}
+			\kern 1 cm
+		\end{header}
+
+		\vspace{0.3 cm - 0.3 cm}
+
+		\section{Summary}
+
+		\begin{onecolentry}
+			Innovative and efficient former International Patent Engineer previously worked
+			in an International Department of a patent law firm, with experience
+			handling cases from US, EU, JP, KR, IN, etc.
+			\newline
+			I am currently seeking full-time position where I will use experience
+			concerning electrical and telecommunication fields developed in my
+			previous employment, extensive and diversified computer science skills,
+			Mathematics education background, Data Analysis capabilities, and
+			professional-level proficiency in English to improve performance.
+		\end{onecolentry}
+
+		\section{Education}
+
+		\begin{twocolentry}
+			{
+
+			\textit{Sept. 2017 to Jan. 2022}} \textbf{Zhejiang Sci-Tech University}
+
+			\textit{BS in Mathematics - Information and Computing Science}
+		\end{twocolentry}
+
+		\vspace{0.15 cm-3px}
+		\begin{onecolentry}
+			\begin{highlights}
+				\item Achievement: Ranking 14\% with scholarship; CET-4, CET-6, Computer
+				Rank Examination (Zhejiang, Level 2, C Programming Language). \item \textbf{Key
+				Coursework:} Mathematics Analysis, Advanced Algebra, Probability Theory
+				and Mathematical Statistics, Differential Equations and Numerical Solutions,
+				Computer Organization and Design, Computer Network, Software Engineering,
+				Data Structures and Algorithms, Database System Principles, Artificial Intelligence
+				and Machine Learning.
+			\end{highlights}
+		\end{onecolentry}
+
+		\section{Experience}
+
+		\begin{twocolentry}
+			{ \textit{Jiangmen, Guangdong}
+
+			\textit{Apr. 2022 to July 2023}} \textbf{International Patent Engineer}
+
+			\textit{Jiaquan IP Law Firm} \hspace{0.15 cm} \textit{\href{https://www.jiaquanip.com}{jiaquanip.com}}
+		\end{twocolentry}
+
+		\vspace{0.15 cm-3px}
+		\begin{onecolentry}
+			\begin{highlights}
+				\item Experience in bi-directional translation (Chinese - English) in official
+				documents, e.g., patent application documents and Office Actions, and patent
+				infringement lawsuit documents. \textcolor{gray}{(Word count: approx. 500k)}
+				\item Ability to process \textbf{incoming patent applications}, comprising:
+				translation; adaptive amendments according to laws and regulations;
+				responding to Office Actions and Decisions of Rejection; and filing divisional
+				applications. \textcolor{gray}{(Case count: approx. 60)} \item Ability to
+				process \textbf{outgoing patent applications}, comprising: translation; adaptive
+				amendments tailored to local laws and regulations; IDS preparation; and translating
+				and responding to Office Actions, e.g., \textit{ROA}, \textit{NFOA},
+				\textit{FOA}, \textit{Ex Parte Quayle OA}. \textcolor{gray}{(Case count:
+				approx. 20)} \item Ability to provide English support and/or assistance in
+				Face-to-Face/Video/Audio technical meetings, in scenarios such as patent
+				mining, divisional application strategy-making, and patent infringement
+				lawsuit. \item Ability to draft responses to Office Actions for domestic
+				patent applications, and process other events in patent life cycle. \item
+				Promotion to International Patent Agent Level 2 \textcolor{gray}{(a system
+				of Level 0 - 4)} in 1 year.
+			\end{highlights}
+		\end{onecolentry}
+
+		\section{Projects}
+
+		\begin{twocolentry}
+			{ \textit{In active development}
+
+			\textit{2023 - present}} \textbf{Intellectual Property Knowledge Base}
+
+			\textit{\href{https://ipkb.jasonchen.icu}{ipkb.jasonchen.icu}
+			\hspace{0.1 cm}
+			\href{https://github.com/n1cogrv/ipkb}{GitHub - n1cogrv/ipkb}}
+		\end{twocolentry}
+
+		\vspace{0.15 cm-3px}
+		\begin{onecolentry}
+			\begin{highlights}
+				\item Intellectual Property Knowledge Base, IPKB, is a productivity tool
+				created during the off-hours tailored to my needs to reference legal text
+				in business emails with clients and law firms. \item Featuring
+				Intellectual Property Laws and Regulations, IPKB is built specifically for
+				intellectual property practitioners, such as IP attorneys, patent engineers,
+				and IP paralegal assistants. It organizes legal text in a unique way familiar
+				to the industry, and offers approaches to search, locate, index, and reference
+				IP-relevant legal text. \item With modern design and PWA architecture, IPKB
+				is managed to perform its full capabilities even in offline mode. \item
+				Built using React and Docusaurus, IPKB is currently a non-profit and non-commercial
+				website developed, operated and maintained solely by me.
+			\end{highlights}
+		\end{onecolentry}
+
+		\vspace{0.2 cm-3px}
+
+		\begin{twocolentry}
+			{ \textit{EOL}
+
+			\textit{2020 - 2023}} \textbf{Covid-19 US Data Visualization}
+
+			\textit{\href{https://wear-a-mask.jasonchen.icu}{wear-a-mask.jasonchen.icu}}
+		\end{twocolentry}
+
+		\vspace{0.15 cm-3px}
+		\begin{onecolentry}
+			\begin{highlights}
+				\item An online data visualization website built using Python for Data Analysis.
+				Statistics data is fetched from upstream; cleansed, grouped, analyzed,
+				and visualized for country level, state level and even county level.
+				\item Built using Python(pandas) and SQL for Data Analysis, GitHub
+				Workflows for Continuous Integration; HTML5+CSS3+JS, Bootstrap and
+				GitHub Pages for serving; Highcharts for Data Visualization.
+			\end{highlights}
+		\end{onecolentry}
+
+		\section{Additional Skills And Certificates}
+
+		\begin{onecolentry}
+			\textbf{Qualification Exam of Patent Attorney:} Passed Section 3 in July
+			2023.
+		\end{onecolentry}
+
+		\vspace{0.2 cm}
+
+		\begin{onecolentry}
+			\textbf{English Proficiency:} CET-6 (584), TOEIC - 950 (valid before
+			2023Q4), ability to provide full English support in technical conferences.
+		\end{onecolentry}
+
+		\vspace{0.2 cm}
+
+		\begin{onecolentry}
+			\textbf{Programming Languages, Frameworks, and Softwares:} Ability to
+			fully utilize common AI model in daily workflows; Python, Java, SQL, Git, Docker,
+			Linux, React, Microsoft Word, HTML5, CSS3, JavaScript, etc. (See
+			\href{https://github.com/n1cogrv}{GitHub} profile page for more)
+		\end{onecolentry}
+	\end{spacing}
+
+        \vspace{1.5 cm}
+
+        \begin{infobox}
+        	{Info}
+        
+        	\color{gray}
+        	\begin{onecolentry}
+        		\begin{highlights}
+        			\item This file is originally written in \TeX{} format using \TeX{} Live 2023 version, which can be accessed
+        			via \textit{\href{https://im.jasonchen.icu/assets/JasonChen-CV-202405.tex}{JasonChen-CV-202405.tex}}.
+        
+        			\item This PDF document is compiled using pdfLaTeX, last updated: \textit{\today}.
+        		\end{highlights}
+        	\end{onecolentry}
+        \end{infobox}
+\end{document}
